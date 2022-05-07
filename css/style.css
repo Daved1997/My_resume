@@ -1,9 +1,14 @@
 body {
     background-color: #2d283e;
     background-image: url(../assets/bg.svg);
+    background-attachment: fixed;
 }
 main{
   padding: 0 0.5rem;
+}
+.navbar{
+  background-color: #2d283e;
+  background-image: url(../assets/bg.svg);
 }
 a{     
   text-decoration: none;
@@ -21,8 +26,6 @@ a:hover{
 }
 .mbody{
   margin-top: 10rem;
-  height: calc(100vh - 10rem);
-  overflow: auto;
 }
 h1{
   position: relative;
@@ -48,6 +51,7 @@ p{
 .leftsection{
   padding: 0 3rem;
   position: fixed;
+  z-index: 99999;
 }
 .pimage img{
   width: 18vw;
