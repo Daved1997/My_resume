@@ -1,0 +1,141 @@
+body {
+    background-color: #2d283e;
+    background-image: url(../assets/bg.svg);
+}
+main{
+  padding: 0 0.5rem;
+}
+a{     
+  text-decoration: none;
+  padding: .5rem 1rem;
+}
+a:hover{
+  color: #158ff3;
+  cursor: pointer;
+}
+.dark_m_font2 {
+  color: #158ff3;
+}
+.dark_m_font1  {
+  color: #dedde0;
+}
+.mbody{
+  margin-top: 10rem;
+  height: calc(100vh - 10rem);
+  overflow: auto;
+}
+h1{
+  position: relative;
+}
+h1::after {
+  position: absolute;
+  content: "";
+  left: 0;
+  bottom: -0.5rem;
+  width: 60px;
+  height: 0.2rem;
+  background-color: #158ff3;
+}
+p{
+  margin-top: 1rem;
+}
+.boxbg{
+  background-color: #302c40;
+  padding: 1.5rem;
+  border-radius: 0.5rem;
+  margin-bottom: 1.5rem;
+}
+.leftsection{
+  padding: 0 3rem;
+  position: fixed;
+}
+.pimage img{
+  width: 18vw;
+  margin-top: -8rem;
+  border-radius: 0.5rem;
+}
+.socialink{
+  color: #dedde0;
+  font-size: 2vw;
+}
+.socialink :hover{
+  color: #158ff3;
+}
+.wprofile{
+  font-size: 1rem;
+}
+.name{
+  font-size: 1.35rem; 
+  margin-top: 1.5rem;
+}
+.mail a{
+  font-size: 0.75rem;
+  padding: unset;
+}
+.resume-section a{
+  position: relative;
+}
+.hvr-underline-from-center::after{
+  position: absolute;
+  content: "";
+  left: 50%;
+  right: 50%;
+  bottom: 0.12rem;
+  width: 0;
+  height: 0.2rem;
+  background-color: #158ff3;
+}
+.hvr-underline-from-center:hover::after{
+  transition: all .3s ease-in-out;
+  width: 100%;
+  left: 0;
+  right: 0;
+}
+.hvr-underline-from-center:hover{
+  background-color: #dedde0;
+  transition: all .3s ease-in-out;
+}
+.work_padding{
+  padding: 24px 0 26px 26px;
+  border-left: 1px dashed #999;
+  margin-left: 24px;
+}
+.work_contanier{
+  padding-top: 30px;
+}
+.work_title:after {
+  content: "";
+  width: 1rem;
+  height: 1rem;
+  float: left;
+  border-radius: 1rem;
+  margin: -5rem 0 0 -35px;
+  background: #158ff3;
+}
+img{
+  width: auto;
+}
+.grid{
+  display: grid;
+  grid-template-columns: repeat(auto-fill,minmax(120px,1fr));
+  grid-template-rows: repeat(auto-fill,minmax(120px,1fr));
+  -webkit-column-gap: 10px;
+  column-gap: 10px;
+  row-gap: 10px;
+}
+.gdiv{ 
+  background-color: #3a3748;
+  border-radius: 0.5rem;
+}
+.gdiv img{
+  height: 110px;
+  margin-bottom: 10px;
+  padding: 1rem;
+}
+.hvr_zoom{
+  transition: transform .2s;
+  margin: 2px;
+}
+.hvr_zoom:hover{
+  transform: scale(1.1);
+}
