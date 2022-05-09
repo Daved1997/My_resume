@@ -5,16 +5,40 @@
         <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.1.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-1BmE4kWBq78iYhFldvKuhfTAU6auU8tT94WrHftjDbrCEXSU1oBoqyl2QvZ6jIW3" crossorigin="anonymous">
         <link rel="stylesheet" href="css/style.css">
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.8.1/font/bootstrap-icons.css">
+        
     </header>
     <body>
+        <div id="mySidenav" class="sidenav">
+            <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
+            <div class="profile boxbg position-relative">
+                <div class="pimage text-center">
+                    <img src="assets/pp.jpg">
+                </div>
+                <h2 class="dark_m_font2 text-center name" >Divyanshu Rastogi</h2>
+                <p class="dark_m_font1 text-center wprofile" >Frontend Developer</p>
+                <p class="dark_m_font2 text-center mail"><a href="mailto:divyanshu.rastogi.222@gmail.com">divyanshu.rastogi.222@gmail.com</a></p>
+                <div class="text-center">
+                    <a class="socialink"><i class="bi bi-linkedin"></i></a>
+                    <a class="socialink"><i class="bi bi-github"></i></a>
+                    <a class="socialink"><i class="bi bi-twitter"></i></a>
+                    <a class="socialink"><i class="bi bi-instagram"></i></a>
+                </div>
+                <div class="resume-section mt-3 text-center">
+                    <a class="btn dark_m_font2 shadow p-3 hvr-underline-from-center" href="https://drive.google.com/file/d/1Fbo7OfCTR7ZlbWoGE8jijwxAQW0Uw3Oq/view?usp=sharing">Download Resume</a>
+                </div>
+                
+            </div>
+        </div>
         <div class="navbar navbar-expand-lg fixed-top" style="height: 10rem;">
            <div class="container">
             <div class="row" style="width: 100%;">
-                <div class="col-4"></div>
+                <div class="col-4">
+                    <button class="side_nav d-block d-lg-none" onclick="openNav()" ><i class="bi bi-list"></i></button>
+                </div>
                 <div class="col-8"> 
                     <div class="d-flex">
-                    <div class="hvr_zoom"><a class="dark_m_font1">/home</a></div>
-                    <div class="hvr_zoom"><a class="dark_m_font1">/portfolio</a></div>
+                    <div class="hvr_zoom"><a class="dark_m_font1 fw-bolder" onclick="home()">/home</a></div>
+                    <div class="hvr_zoom"><a class="dark_m_font1 fw-bolder" onclick="portfolio()">/portfolio</a></div>
                     <div class="form-check form-switch ms-auto hvr_zoom">
                         <input class="form-check-input" type="checkbox" role="switch" id="flexSwitchCheckDefault">
                         <label class="form-check-label" for="flexSwitchCheckDefault"></label>
@@ -26,8 +50,8 @@
            
         </div>
         <div class="contanier mbody">
-            <div class="row" style="max-width: 100%;">
-                <div class="col-4 leftsection">
+            <div class="row mx-auto" style="max-width: 100%;">
+                <div class="col-4 leftsection d-none d-lg-block">
                     <div class="profile boxbg position-relative">
                         <div class="pimage text-center">
                             <img src="assets/pp.jpg">
@@ -42,170 +66,207 @@
                             <a class="socialink"><i class="bi bi-instagram"></i></a>
                         </div>
                         <div class="resume-section mt-3 text-center">
-                            <a class="btn dark_m_font2 shadow p-3 hvr-underline-from-center">Download Resume</a>
+                            <a class="btn dark_m_font2 shadow p-3 hvr-underline-from-center" href="https://drive.google.com/file/d/1Fbo7OfCTR7ZlbWoGE8jijwxAQW0Uw3Oq/view?usp=sharing">Download Resume</a>
                         </div>
                         
                     </div>
                 </div>
-               <div class="col-4"></div>
-                <div class="col-8">
-                 <div class="aboutme boxbg">
-                     <h1 class="title dark_m_font1">About Me</h1>
-                     <p class="dark_m_font1">Hey! I'm Divyanshu, frontend developer and 3d artist, 
-                         who strives to develop efficient frontend solutions and design beautiful & user-friendly user interfaces. 
-                         This is my home on the web where I post my thoughts and showcase my work and a bit about myself.</p>
-                        <p class="dark_m_font1">
-                            I'm an avid gamer and a movie buff. In my free time, I also like to learn new things.</p>                         
-                        <p class="dark_m_font1">
-                            I love to work in a virtual world.
-                             It makes me feel like making my imagination into reality. 
-                             It gives me strength to make myself confident and empower my believes.
-                            </p>
-                 </div>
-                </div>
-            </div>
-            <div class="row" style="width: 100%;">
-                <div class="col-4"></div>
-                <div class="col-8">
-                    <div class="aboutme boxbg">
-                        <h1 class="title dark_m_font1"> Work Experience</h1>
-                        <div class="work_contanier work_padding">
-                            <div class="work_title">
-                                <h2 class="dark_m_font1 fw-normal">Freelancer</h2>
-                                <p><span class="dark_m_font2">Jan 2019 - Present</span> <span class="dark_m_font1"></span></p>
-                            </div>
-                            <p class="dark_m_font1">In this meantime,
-                                 I have spent time on learning frontend development and 
-                                 worked on some 3d modelling and video editing works.</p>
+               <div class="col-4 d-none d-lg-block"></div>
+                <div class="col-12 col-lg-8">
+                    <div class="home" id="home">
+                        <div class="aboutme boxbg">
+                            <h1 class="title dark_m_font1">About Me</h1>
+                            <p class="dark_m_font1">Hey! I'm Divyanshu, frontend developer and 3d artist, 
+                                who strives to develop efficient frontend solutions and design beautiful & user-friendly user interfaces. 
+                                This is my home on the web where I post my thoughts and showcase my work and a bit about myself.</p>
+                                <p class="dark_m_font1">
+                                    I'm an avid gamer and a movie buff. In my free time, I also like to learn new things.</p>                         
+                                <p class="dark_m_font1">
+                                    I love to work in a virtual world.
+                                    It makes me feel like making my imagination into reality. 
+                                    It gives me strength to make myself confident and empower my believes.
+                                    </p>
                         </div>
-                        <div class="work_contanier work_padding">
-                            <div class="work_title">
-                                <h2 class="dark_m_font1 fw-normal">3D Modeler</h2>
-                                <p><span class="dark_m_font2">Aug 2017 - Jan 2019</span> <span class="dark_m_font1">Sunovatech Infra pvt.ltd.</span></p>
+                        <div class="aboutme boxbg">
+                            <h1 class="title dark_m_font1"> Work Experience</h1>
+                            <div class="work_contanier work_padding">
+                                <div class="work_title">
+                                    <h2 class="dark_m_font1 fw-normal">Freelancer</h2>
+                                    <p><span class="dark_m_font2">Jan 2019 - Present</span> <span class="dark_m_font1"></span></p>
+                                </div>
+                                <p class="dark_m_font1">In this meantime,
+                                    I have spent time on learning frontend development and 
+                                    worked on some 3d modelling and video editing works.</p>
                             </div>
-                            <p class="dark_m_font1">At this company, I was working on a 3d modeller post.
-                                its an infrastructure visualisation company. 
-                                At this place we worked to pre visualise infrastructure of many mega projects like rail network,
-                                 highways and cities visualisation.</p>
+                            <div class="work_contanier work_padding">
+                                <div class="work_title">
+                                    <h2 class="dark_m_font1 fw-normal">3D Modeler</h2>
+                                    <p><span class="dark_m_font2">Aug 2017 - Jan 2019</span> <span class="dark_m_font1">Sunovatech Infra pvt.ltd.</span></p>
+                                </div>
+                                <p class="dark_m_font1">At this company, I was working on a 3d modeller post.
+                                    its an infrastructure visualisation company. 
+                                    At this place we worked to pre visualise infrastructure of many mega projects like rail network,
+                                    highways and cities visualisation.</p>
+                            </div>
+                            <div class="work_contanier work_padding">
+                                <div class="work_title">
+                                    <h2 class="dark_m_font1 fw-normal">3D Visualizer</h2>
+                                    <p><span class="dark_m_font2">Aug 2016 - Jan 2017</span> <span class="dark_m_font1">Andi Woodworks pvt.ltd.</span></p>
+                                </div>
+                                <p class="dark_m_font1">At this company,
+                                    I was working on a 3d Artist post.its an architectural visualisation company. 
+                                    At this place we worked to pre visualise the interior exterior of someone's 
+                                    dream home.kind of making someone's dream come true. I loved working there.</p>
+                            </div>
                         </div>
-                        <div class="work_contanier work_padding">
-                            <div class="work_title">
-                                <h2 class="dark_m_font1 fw-normal">3D Visualizer</h2>
-                                <p><span class="dark_m_font2">Aug 2016 - Jan 2017</span> <span class="dark_m_font1">Andi Woodworks pvt.ltd.</span></p>
+                        <div class="aboutme boxbg">
+                            <h1 class="title dark_m_font1"> Technical Skills</h1>
+                            <div class="work_contanier">
+                                <h2 class="dark_m_font1 fw-normal">Languages</h2>
+                                <div class="grid text-center p-3">
+                                    <div class="hvr_zoom">
+                                        <div  class="gdiv">
+                                            <img src="assets/js.webp" alt="">
+                                        </div>
+                                        <p class="dark_m_font1">JavaScript</p>
+                                    </div>
+                                    <div class="hvr_zoom">
+                                        <div  class="gdiv">
+                                            <img src="assets/ts.webp" alt="">
+                                        </div>
+                                        <p class="dark_m_font1">TypeScript</p>
+                                    </div>
+                                </div>
                             </div>
-                            <p class="dark_m_font1">At this company,
-                                 I was working on a 3d Artist post.its an architectural visualisation company. 
-                                 At this place we worked to pre visualise the interior exterior of someone's 
-                                 dream home.kind of making someone's dream come true. I loved working there.</p>
+                            <div class="work_contanier">
+                                <h2 class="dark_m_font1 fw-normal">Frontend</h2>
+                                <div class="grid text-center p-3">
+                                    <div class="hvr_zoom">
+                                        <div  class="gdiv">
+                                            <img src="assets/html.webp" alt="">
+                                        </div>
+                                        <p class="dark_m_font1">HTML5</p>
+                                    </div>
+                                    <div class="hvr_zoom">
+                                        <div  class="gdiv">
+                                            <img src="assets/css.webp" alt="">
+                                        </div>
+                                        <p class="dark_m_font1">CSS</p>
+                                    </div>
+                                    <div class="hvr_zoom">
+                                        <div  class="gdiv">
+                                            <img src="assets/bootstrap.webp" alt="">
+                                        </div>
+                                        <p class="dark_m_font1">Bootstrap</p>
+                                    </div>
+                                    <div class="hvr_zoom">
+                                        <div  class="gdiv">
+                                            <img src="assets/angular.webp" alt="">
+                                        </div>
+                                        <p class="dark_m_font1">Angular</p>
+                                    </div>
+                                    <div class="hvr_zoom">
+                                        <div  class="gdiv">
+                                            <img src="assets/react.webp" alt="">
+                                        </div>
+                                        <p class="dark_m_font1">React</p>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="work_contanier">
+                                <h2 class="dark_m_font1 fw-normal">Software's</h2>
+                                <div class="grid text-center p-3">
+                                    <div class="hvr_zoom">
+                                        <div  class="gdiv">
+                                            <img src="assets/html.webp" alt="">
+                                        </div>
+                                        <p class="dark_m_font1">HTML5</p>
+                                    </div>
+                                    <div class="hvr_zoom">
+                                        <div  class="gdiv">
+                                            <img src="assets/css.webp" alt="">
+                                        </div>
+                                        <p class="dark_m_font1">CSS</p>
+                                    </div>
+                                    <div class="hvr_zoom">
+                                        <div  class="gdiv">
+                                            <img src="assets/bootstrap.webp" alt="">
+                                        </div>
+                                        <p class="dark_m_font1">Bootstrap</p>
+                                    </div>
+                                    <div class="hvr_zoom">
+                                        <div  class="gdiv">
+                                            <img src="assets/angular.webp" alt="">
+                                        </div>
+                                        <p class="dark_m_font1">Angular</p>
+                                    </div>
+                                    <div class="hvr_zoom">
+                                        <div  class="gdiv">
+                                            <img src="assets/react.webp" alt="">
+                                        </div>
+                                        <p class="dark_m_font1">React</p>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
                     </div>
-                </div>
-            </div>
-            <div class="row" style="width: 100%;">
-                <div class="col-4"></div>
-                <div class="col-8">
-                    <div class="aboutme boxbg">
-                        <h1 class="title dark_m_font1"> Technical Skills</h1>
-                        <div class="work_contanier">
-                            <h2 class="dark_m_font1 fw-normal">Languages</h2>
-                            <div class="grid text-center p-3">
-                                <div class="hvr_zoom">
-                                    <div  class="gdiv">
-                                        <img src="assets/js.webp" alt="">
-                                    </div>
-                                    <p class="dark_m_font1">JavaScript</p>
-                                </div>
-                                <div class="hvr_zoom">
-                                    <div  class="gdiv">
-                                        <img src="assets/ts.webp" alt="">
-                                    </div>
-                                    <p class="dark_m_font1">TypeScript</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="work_contanier">
-                            <h2 class="dark_m_font1 fw-normal">Frontend</h2>
-                            <div class="grid text-center p-3">
-                                <div class="hvr_zoom">
-                                    <div  class="gdiv">
-                                        <img src="assets/html.webp" alt="">
-                                    </div>
-                                    <p class="dark_m_font1">HTML5</p>
-                                </div>
-                                <div class="hvr_zoom">
-                                    <div  class="gdiv">
-                                        <img src="assets/css.webp" alt="">
-                                    </div>
-                                    <p class="dark_m_font1">CSS</p>
-                                </div>
-                                <div class="hvr_zoom">
-                                    <div  class="gdiv">
-                                        <img src="assets/bootstrap.webp" alt="">
-                                    </div>
-                                    <p class="dark_m_font1">Bootstrap</p>
-                                </div>
-                                <div class="hvr_zoom">
-                                    <div  class="gdiv">
-                                        <img src="assets/angular.webp" alt="">
-                                    </div>
-                                    <p class="dark_m_font1">Angular</p>
-                                </div>
-                                <div class="hvr_zoom">
-                                    <div  class="gdiv">
-                                        <img src="assets/react.webp" alt="">
-                                    </div>
-                                    <p class="dark_m_font1">React</p>
-                                </div>
-                            </div>
-                        </div>
-                        <div class="work_contanier">
-                            <h2 class="dark_m_font1 fw-normal">Software's</h2>
-                            <div class="grid text-center p-3">
-                                <div class="hvr_zoom">
-                                    <div  class="gdiv">
-                                        <img src="assets/html.webp" alt="">
-                                    </div>
-                                    <p class="dark_m_font1">HTML5</p>
-                                </div>
-                                <div class="hvr_zoom">
-                                    <div  class="gdiv">
-                                        <img src="assets/css.webp" alt="">
-                                    </div>
-                                    <p class="dark_m_font1">CSS</p>
-                                </div>
-                                <div class="hvr_zoom">
-                                    <div  class="gdiv">
-                                        <img src="assets/bootstrap.webp" alt="">
-                                    </div>
-                                    <p class="dark_m_font1">Bootstrap</p>
-                                </div>
-                                <div class="hvr_zoom">
-                                    <div  class="gdiv">
-                                        <img src="assets/angular.webp" alt="">
-                                    </div>
-                                    <p class="dark_m_font1">Angular</p>
-                                </div>
-                                <div class="hvr_zoom">
-                                    <div  class="gdiv">
-                                        <img src="assets/react.webp" alt="">
-                                    </div>
-                                    <p class="dark_m_font1">React</p>
-                                </div>
-                            </div>
+                    <div class="portfolio" id="portfolio">
+                        <div class="aboutme boxbg">
+                            <h1 class="title dark_m_font1">Projects</h1>
+                           <div class="card mt-5 mx-auto" style="width: 95%;">
+                               <img src="assets/travel.png" class="card-img-top" alt="...">
+                               <div class="card-body Portfolio_div shadow">
+                                 <h5 class="card-title dark_m_font1">Travel_blog_temp</h5>
+                                 <p class="card-text"></p>
+                                 <a href="https://daved1997.github.io/Travel_blog_temp/" class="btn btn-primary">Preview</a>
+                               </div>
+                           </div>
+                           <div class="card mt-5 mx-auto" style="width: 95%;">
+                               <img src="assets/Bake.png" class="card-img-top" alt="...">
+                               <div class="card-body Portfolio_div shadow">
+                                 <h5 class="card-title dark_m_font1">Bakehouse_temp</h5>
+                                 <p class="card-text"></p>
+                                 <a href="https://daved1997.github.io/bakehouse_temp/" class="btn btn-primary">Preview</a>
+                               </div>
+                           </div>
+                           <div class="card mt-5 mx-auto" style="width: 95%;">
+                               <img src="assets/Portfolio_thumb.png" class="card-img-top" alt="...">
+                               <div class="card-body Portfolio_div shadow">
+                                 <h5 class="card-title dark_m_font1">Portfolio_temp</h5>
+                                 <p class="card-text"></p>
+                                 <a href="https://daved1997.github.io/Portfolio/" class="btn btn-primary">Preview</a>
+                               </div>
+                           </div>
+                           <div class="card mt-5 mx-auto" style="width: 95%;">
+                               <img src="assets/music.png" class="card-img-top" alt="...">
+                               <div class="card-body Portfolio_div shadow">
+                                 <h5 class="card-title dark_m_font1">Musicstudio_temp</h5>
+                                 <p class="card-text"></p>
+                                 <a href="https://daved1997.github.io/Musicstudio/" class="btn btn-primary">Preview</a>
+                               </div>
+                           </div>
+                           <div class="card mt-5 mx-auto" style="width: 95%;">
+                               <img src="assets/resum.png" class="card-img-top" alt="...">
+                               <div class="card-body Portfolio_div shadow">
+                                 <h5 class="card-title dark_m_font1">Resume_temp</h5>
+                                 <p class="card-text"></p>
+                                 <a href="https://daved1997.github.io/resume_temp/" class="btn btn-primary">Preview</a>
+                               </div>
+                           </div>
                         </div>
                     </div>
                 </div>
             </div>
         </div>
+        <script src="js/script.js"></script>
     </body>
-    <footer>
+    <footer>   
         <script>
             var butn = document.getElementById("flexSwitchCheckDefault");
 
             butn.onclick = function(){
                 document.body.classList.toggle("light-theme");
             }
-
 
         </script>
     </footer>
