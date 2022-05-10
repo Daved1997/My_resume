@@ -83,7 +83,6 @@ p{
 }
 .socialink{
   color: var(--secondary-color);
-  font-size: 2vw;
 }
 .socialink :hover{
   color: #158ff3;
